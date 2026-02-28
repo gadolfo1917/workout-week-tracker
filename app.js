@@ -186,6 +186,17 @@ function App() {
           <div className="big">Week {weekNumber}</div>
           <div className="muted">{formatDate(weekStart)} – {formatDate(weekEnd)}</div>
           <div style={{ marginTop: 10 }} className="muted">Completed: <b>{completedCount}</b> / {sessions.length}</div>
+              <div style={{ marginTop: 10 }} className="row">
+  <button className="btn" onClick={() => markSessionToday(0)}>
+    I did Session 1 today
+  </button>
+  <button className="btn" onClick={() => markSessionToday(1)}>
+    I did Session 2 today
+  </button>
+  <button className="btn" onClick={() => markSessionToday(2)}>
+    I did Session 3 today
+  </button>
+</div>
           <div style={{ marginTop: 10 }} className="row">
             {pattern.map((k, i) => <span key={i} className="badge">Session {i+1}: {k}</span>)}
           </div>
