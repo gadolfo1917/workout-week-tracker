@@ -186,7 +186,7 @@ function App() {
           <div className="big">Week {weekNumber}</div>
           <div className="muted">{formatDate(weekStart)} – {formatDate(weekEnd)}</div>
           <div style={{ marginTop: 10 }} className="muted">Completed: <b>{completedCount}</b> / {sessions.length}</div>
-              <div style={{ marginTop: 10 }} className="row">
+             <div style={{ marginTop: 10 }} className="row">
   <button className="btn" onClick={() => markSessionToday(0)}>
     I did Session 1 today
   </button>
