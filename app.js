@@ -2,6 +2,23 @@ const { useEffect, useMemo, useState } = React;
 
 const LS_KEY = "wk-tracker-static-v2";
 
+// iPhone-friendly larger font sizing
+const style = document.createElement("style");
+style.innerHTML = `
+  body { font-size: 18px; }
+  .h1 { font-size: 30px !important; }
+  .sub { font-size: 17px !important; line-height: 1.5 !important; }
+  .pill, .btn { font-size: 18px !important; padding: 12px 16px !important; }
+  .cardT { font-size: 20px !important; }
+  .badge { font-size: 15px !important; padding: 4px 10px !important; }
+  .big { font-size: 52px !important; }
+  .sessionTitle { font-size: 19px !important; }
+  ul { font-size: 18px !important; line-height: 1.7 !important; }
+  textarea, input { font-size: 18px !important; }
+  .footer { font-size: 16px !important; }
+`;
+document.head.appendChild(style);
+
 const CYCLES = {
   strength: {
     label: "Strength",
